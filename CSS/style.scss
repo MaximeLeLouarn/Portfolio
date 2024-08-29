@@ -1,0 +1,212 @@
+// Colors palette
+$white: white;
+$black: black;
+$blackOpacity: rgba(0, 0, 0, 0.6);
+$darkBlue: #041e42;
+$darkRed: #e00000;
+$middleRed: #fe5858;
+$lightRed: #ffd6d6;
+$darkGrey: #c4c4c4;
+$mediumGrey: #d8d8d8;
+$lightGrey: #e5e5e5;
+$labelBorders: #b8bbc2;
+
+// Include the fonts
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/Poppins-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../assets/Poppins-Light.ttf") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Space Mono";
+    src: url("../assets/SpaceMono-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Space Mono";
+    src: url("../assets/SpaceMono-BoldItalic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Space Mono";
+    src: url("../assets/SpaceMono-Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Space Mono";
+    src: url("../assets/SpaceMono-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+// General styling parameters
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    box-sizing: border-box;
+    margin: auto;
+    min-height: 100vh;
+    background-color: $darkBlue;
+    color: $white;
+}
+li {
+    list-style-type: none;
+}
+a {
+    font-family: "Space Mono", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    color: $white;
+}
+
+// Setting the fonts styles
+h1 {
+    font-family: "Space Mono", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 96px;
+}
+h2 {
+    font-family: "Space Mono", sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    font-size: 66px;
+}
+h3 {
+    font-family: "Space Mono", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+}
+h4 {
+    font-family: "Space Mono", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+p {
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 27.5px;
+    }
+    h2 {
+        line-height: 3.5rem;
+        font-size: 48px;
+    }
+}
+
+// Header Menu
+header {
+    max-width: 1440px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    nav#site-navigation {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .logoHeader {
+            width: 50%;
+            img {
+                padding-left: 12%;
+                height: 14px;
+            }
+        }
+
+        .headerMenusContainer {
+            width: 50%;
+
+            #primary-menu {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                ul {
+                    display: flex;
+                    gap: 5%;
+                    padding-right: 6%;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    header {
+        height: 72px;
+
+        .logoHeader {
+            img {
+                height: 9px;
+            }
+        }
+    }
+}
+// Footer Menu
+footer#colophon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1440px;
+    height: 80px;
+    margin: auto;
+}
+div#footer-menu {
+    display: flex;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        li {
+            text-align: center;
+        }
+    }
+}
+
+main#primary {
+    // First section, Bubbles
+    .bubblesbgc {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2234ae;
+        background-image: linear-gradient(0deg, #191714 0%, #2234ae 84%);
+        overflow: hidden;
+        position: relative;
+        .bubbles {
+            max-width: 1440px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

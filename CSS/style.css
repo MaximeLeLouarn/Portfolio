@@ -1,0 +1,188 @@
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url("../assets/Poppins-Light.ttf") format("truetype");
+  font-weight: lighter;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/SpaceMono-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/SpaceMono-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/SpaceMono-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Space Mono";
+  src: url("../assets/SpaceMono-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: border-box;
+  margin: auto;
+  min-height: 100vh;
+  background-color: #041e42;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  font-family: "Space Mono", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+h1 {
+  font-family: "Space Mono", sans-serif;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 96px;
+}
+
+h2 {
+  font-family: "Space Mono", sans-serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 66px;
+}
+
+h3 {
+  font-family: "Space Mono", sans-serif;
+  font-weight: normal;
+  font-size: 18px;
+}
+
+h4 {
+  font-family: "Space Mono", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 27.5px;
+  }
+  h2 {
+    line-height: 3.5rem;
+    font-size: 48px;
+  }
+}
+header {
+  max-width: 1440px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+header nav#site-navigation {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+header nav#site-navigation .logoHeader {
+  width: 50%;
+}
+header nav#site-navigation .logoHeader img {
+  padding-left: 12%;
+  height: 14px;
+}
+header nav#site-navigation .headerMenusContainer {
+  width: 50%;
+}
+header nav#site-navigation .headerMenusContainer #primary-menu {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+header nav#site-navigation .headerMenusContainer #primary-menu ul {
+  display: flex;
+  gap: 5%;
+  padding-right: 6%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    height: 72px;
+  }
+  header .logoHeader img {
+    height: 9px;
+  }
+}
+footer#colophon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+  height: 80px;
+  margin: auto;
+}
+
+div#footer-menu {
+  display: flex;
+}
+div#footer-menu ul {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+div#footer-menu ul li {
+  text-align: center;
+}
+
+main#primary .bubblesbgc {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2234ae;
+  background-image: linear-gradient(0deg, #191714 0%, #2234ae 84%);
+  overflow: hidden;
+  position: relative;
+}
+main#primary .bubblesbgc .bubbles {
+  max-width: 1440px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
