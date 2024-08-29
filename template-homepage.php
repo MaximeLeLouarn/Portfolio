@@ -9,9 +9,7 @@ get_header();
 <main id="primary" class="site-main">
 
     <section class="bubblesbgc">
-        <div class="bubbles">
-        <h1>Bonjour, Je suis Maxime, Développeur Web</h1>
-        </div>
+        <h1>Développeur web <br>et<br> Webmaster</h1>
     </section>
 
 </main>
