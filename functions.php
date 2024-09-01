@@ -144,6 +144,10 @@ function portfoliomax_scripts() {
 
 	wp_enqueue_script( 'portfoliomax-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/animations.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/lightbox.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfoliomax-slider', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'swiper-import', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

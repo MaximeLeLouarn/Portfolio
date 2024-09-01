@@ -243,9 +243,35 @@ main#primary {
                 }
             }
             .skills {
-                display: flex;
-                p {
-                    text-align: center;
+                width: 100vw;
+                .swiper {
+                    width: 100vw;
+                    height: 450px;
+                    display: flex;
+                    align-items: center;
+                    overflow: hidden;
+
+                    .swiper-wrapper {
+                        display: flex;
+                        flex-direction: row;
+                    }
+                }
+
+                .skillop {
+                    height: 350px;
+                    object-fit: contain;
+                    aspect-ratio: 3 / 2;
+                }
+                .swiper-slide {
+                    background-position: center;
+                    background-size: cover;
+                    width: 350px;
+                }
+                @media screen and (max-width: 1000px) {
+                    .swiper-slide {
+                        width: 250px;
+                        height: 250px;
+                    }
                 }
             }
         }
