@@ -26,8 +26,9 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'portfoliomax' ); ?></a>
 
 	<header id="masthead" class="site-header">
+		<div class="headerContainer">
 
-		<nav id="site-navigation" class="main-navigation">
+			<nav id="site-navigation" class="main-navigation">
 			
 				<div class="logoHeader">
 					<a href="<?php echo get_home_url(); ?>">
@@ -46,4 +47,5 @@
 				?>
 				</div>
 			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->

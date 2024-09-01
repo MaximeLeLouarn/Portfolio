@@ -102,35 +102,42 @@ p {
   }
 }
 header {
-  max-width: 1440px;
   height: 80px;
+  background-color: #2234ae;
+  background-image: linear-gradient(0deg, #2234ae 0%, skyblue);
+  display: flex;
+}
+header .headerContainer {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
-header nav#site-navigation {
+header .headerContainer nav#site-navigation {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
-header nav#site-navigation .logoHeader {
+header .headerContainer nav#site-navigation .logoHeader {
   width: 50%;
 }
-header nav#site-navigation .logoHeader img {
+header .headerContainer nav#site-navigation .logoHeader img {
   padding-left: 12%;
   height: 14px;
 }
-header nav#site-navigation .headerMenusContainer {
+header .headerContainer nav#site-navigation .headerMenusContainer {
   width: 50%;
 }
-header nav#site-navigation .headerMenusContainer #primary-menu {
+header .headerContainer nav#site-navigation .headerMenusContainer #primary-menu {
   width: 100%;
   display: flex;
   justify-content: flex-end;
 }
-header nav#site-navigation .headerMenusContainer #primary-menu ul {
+header .headerContainer nav#site-navigation .headerMenusContainer #primary-menu ul {
   display: flex;
   gap: 5%;
   padding-right: 6%;
@@ -139,9 +146,6 @@ header nav#site-navigation .headerMenusContainer #primary-menu ul {
 @media screen and (max-width: 768px) {
   header {
     height: 72px;
-  }
-  header .logoHeader img {
-    height: 9px;
   }
 }
 footer#colophon {
@@ -187,25 +191,42 @@ main#primary .bubblesbgc h1 {
   align-items: center;
 }
 main#primary .bubblesbgc span {
+  bottom: -120px;
   position: absolute;
-  bottom: -50px;
   background: transparent;
   border-radius: 50%;
-  pointer-events: auto;
+  pointer-events: none;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
 }
-main#primary .bubblesbgc span ::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  transform: scale(0.25) translate(-70%, -70%);
-  background: radial-gradient(white, transparent);
-  border-radius: 50%;
+main#primary .infosSkillsContainer {
+  background-color: #191714;
+  background-image: linear-gradient(0deg, black 0%, #191714 84%);
+}
+main#primary .infosSkillsContainer .infosSkills {
+  padding-top: 25px;
+  margin: auto;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+main#primary .infosSkillsContainer .infosSkills .description {
+  max-width: 800px;
+  margin: 0 5%;
+}
+main#primary .infosSkillsContainer .infosSkills .description p {
+  text-align: center;
+}
+main#primary .infosSkillsContainer .infosSkills .skills {
+  display: flex;
+}
+main#primary .infosSkillsContainer .infosSkills .skills p {
+  text-align: center;
 }
 
-.bubbleClimbKeyframe {
-  animation: bubbleAnimation 8s linear infinite;
+.elevateBubbles {
+  animation: bubbleAnimation 10s linear infinite;
 }
 
 .pop {

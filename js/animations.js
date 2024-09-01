@@ -1,22 +1,20 @@
 function createBubble() {
   const bubbleSection = document.querySelector(".bubblesbgc");
   const createElement = document.createElement("span");
+  const getTheBubbles = document.querySelectorAll(".elevateBubbles");
   // Math.random is a static ethod that returns a floating point,
   // pseudo-random number that's greater than or equal to 0 and less than 1.
   let size = Math.random() * 60;
 
+  createElement.classList.add("elevateBubbles");
   createElement.style.width = 20 + size + "px";
   createElement.style.height = 20 + size + "px";
   createElement.style.left = Math.random() * innerWidth + "px";
   createElement.style.pointerEvents = "auto"; // Ensures bubble can be hovered over
-  window.addEventListener("DOMContentLoaded", (event) => {
-    createElement.classList.add("bubbleClimbKeyframe");
-  });
 
   // Add event listener to pop bubble on mouseenter
   createElement.addEventListener("mouseenter", function () {
     // Add the pop class to trigger the explode animation
-    this.classList.remove("bubbleClimbKeyframe");
     this.classList.add("pop");
 
     // Remove bubble after the animation
@@ -32,4 +30,4 @@ function createBubble() {
   }, 11000);
 }
 
-setInterval(createBubble, 170);
+setInterval(createBubble, 500);

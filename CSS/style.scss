@@ -115,39 +115,46 @@ p {
 
 // Header Menu
 header {
-    max-width: 1440px;
     height: 80px;
+    background-color: #2234ae;
+    background-image: linear-gradient(0deg, #2234ae 0%, skyblue);
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    nav#site-navigation {
+    .headerContainer {
         width: 100%;
+        max-width: 1440px;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
+        align-items: center;
 
-        .logoHeader {
-            width: 50%;
-            img {
-                padding-left: 12%;
-                height: 14px;
+        nav#site-navigation {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+            .logoHeader {
+                width: 50%;
+                img {
+                    padding-left: 12%;
+                    height: 14px;
+                }
             }
-        }
 
-        .headerMenusContainer {
-            width: 50%;
+            .headerMenusContainer {
+                width: 50%;
 
-            #primary-menu {
-                width: 100%;
-                display: flex;
-                justify-content: flex-end;
-
-                ul {
+                #primary-menu {
+                    width: 100%;
                     display: flex;
-                    gap: 5%;
-                    padding-right: 6%;
+                    justify-content: flex-end;
+
+                    ul {
+                        display: flex;
+                        gap: 5%;
+                        padding-right: 6%;
+                    }
                 }
             }
         }
@@ -156,12 +163,6 @@ header {
 @media screen and (max-width: 768px) {
     header {
         height: 72px;
-
-        .logoHeader {
-            img {
-                height: 9px;
-            }
-        }
     }
 }
 // Footer Menu
@@ -211,29 +212,49 @@ main#primary {
         }
 
         span {
+            bottom: -120px;
             position: absolute;
-            bottom: -50px;
             background: transparent;
             border-radius: 50%;
-            pointer-events: auto;
+            pointer-events: none;
             box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+    }
 
-            ::before {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                transform: scale(0.25) translate(-70%, -70%);
-                background: radial-gradient($white, transparent);
-                border-radius: 50%;
+    .infosSkillsContainer {
+        background-color: #191714;
+        background-image: linear-gradient(0deg, $black 0%, #191714 84%);
+
+        .infosSkills {
+            padding-top: 25px;
+            margin: auto;
+            max-width: 1440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+
+            .description {
+                max-width: 800px;
+                margin: 0 5%;
+
+                p {
+                    text-align: center;
+                }
+            }
+            .skills {
+                display: flex;
+                p {
+                    text-align: center;
+                }
             }
         }
     }
 }
 
 // Animations and keyframes
-.bubbleClimbKeyframe {
-    animation: bubbleAnimation 8s linear infinite;
+.elevateBubbles {
+    animation: bubbleAnimation 10s linear infinite;
 }
 .pop {
     animation: explode 1s forwards ease-out;
