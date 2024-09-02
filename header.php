@@ -32,7 +32,7 @@
 			
 				<div class="logoHeader">
 					<a href="<?php echo get_home_url(); ?>">
-						<img src="" alt="Logo Nathalie Mota">
+						<img src="<?= get_template_directory_uri() . '/assets/lighthouse.png' ?>" alt="lighthouse logo">
 					</a>
 				</div>
 				

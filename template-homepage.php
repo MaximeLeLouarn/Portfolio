@@ -30,37 +30,37 @@ get_header();
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="skill1 swiper-slide">
+                        <div class="skill1 swiper-slide" data-skill="javascript">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/JSscallop.png' ?>" alt="Javascript icon inside a great scallop">
                         </div>
-                        <div class="skill2 swiper-slide">
+                        <div class="skill2 swiper-slide" data-skill="html">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/HTMLscallop.png' ?>" alt="HTML icon inside a great scallop">
                         </div>
-                        <div class="skill3 swiper-slide">
+                        <div class="skill3 swiper-slide" data-skill="php">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/PHPscallop.png' ?>" alt="PHP icon inside a great scallop">
                         </div>
-                        <div class="skill4 swiper-slide">
+                        <div class="skill4 swiper-slide" data-skill="greenit">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/GreenITscallop.png' ?>" alt="GreenIT icon inside a great scallop">
                         </div>
-                        <div class="skill5 swiper-slide">
+                        <div class="skill5 swiper-slide" data-skill="agile">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Agilescallop.png' ?>" alt="Agile icon inside a great scallop">
                         </div>
-                        <div class="skill6 swiper-slide">
+                        <div class="skill6 swiper-slide" data-skill="css">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/CSSscallop.png' ?>" alt="CSS icon inside a great scallop">
                         </div>
-                        <div class="skill7 swiper-slide">
+                        <div class="skill7 swiper-slide" data-skill="sass">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SASSscallop.png' ?>" alt="SASS icon inside a great scallop">
                         </div>
-                        <div class="skill8 swiper-slide">
+                        <div class="skill8 swiper-slide" data-skill="translation">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Translationscallop.png' ?>" alt="Translation icon inside a great scallop">
                         </div>
-                        <div class="skill9 swiper-slide">
+                        <div class="skill9 swiper-slide" data-skill="seo">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SEOscallop.png' ?>" alt="SEO icon inside a great scallop">
                         </div>
                     </div>
                 </div>
             </div>
-            <p>En résumé, JS - PHP - HTML - CSS - SASS - Méthode Agile - SEO - Traduction de contenu en anglais - Green IT</p>
+            <p>En résumé : JS - PHP - HTML - CSS - SASS - Méthode Agile - SEO - Traduction de contenu en anglais - Green IT</p>
         </div>
     </section>
 

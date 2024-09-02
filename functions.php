@@ -50,6 +50,8 @@ function portfoliomax_setup() {
 	register_nav_menus(
 		array(
 			'menu-1' => esc_html__( 'Primary', 'portfoliomax' ),
+			'mobile-menu' => esc_html('Mobile', 'nathaliemota'),
+			'footer-menu' => esc_html__('Footer', 'nathaliemota'),
 		)
 	);
 
@@ -146,6 +148,7 @@ function portfoliomax_scripts() {
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/animations.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/lightbox.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-slider', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfoliomax-ajax', get_template_directory_uri() . '/js/ajax.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'swiper-import', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
 	
 
