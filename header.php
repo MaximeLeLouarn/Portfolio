@@ -33,6 +33,7 @@
 				<div class="logoHeader">
 					<a href="<?php echo get_home_url(); ?>">
 						<img src="<?= get_template_directory_uri() . '/assets/lighthouse.png' ?>" alt="lighthouse logo">
+						<h3>Blue Dimensions</h3>
 					</a>
 				</div>
 				

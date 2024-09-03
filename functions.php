@@ -148,7 +148,7 @@ function portfoliomax_scripts() {
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/animations.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/lightbox.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-slider', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'portfoliomax-ajax', get_template_directory_uri() . '/js/ajax.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'portfoliomax-ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), _S_VERSION, true );
 	wp_enqueue_script( 'swiper-import', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
 	
 
@@ -185,3 +185,42 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+// Custom functions
+
+function fetch_scallop_content() {
+
+		if (isset($_POST['skill_name'])) {
+			$skill_name = sanitize_text_field($_POST['skill_name']);
+
+        if ($skill) {
+            $args = [
+                'post_type' => 'scallop',
+                'posts_per_page' => 1,  // Adjust based on your requirement
+                'orderby' => 'name',
+                'order' => 'DESC',
+                'meta_query' => [
+                    [
+                        'key' => 'skillname',  // This is the ACF field name
+                        'value' => $skill_name,
+                        'compare' => '=',  // Exact match
+                    ]
+                ]
+            ];
+
+        // Start output buffering to capture the content
+        ob_start();
+
+        // Load the content from the template part, passing necessary variables
+        get_template_part('template-parts/styleScallop', null, array('skill' => $skill));
+
+        // Get buffered content
+        $content = ob_get_clean();
+
+        // Output the content
+        echo $content;
+    }
+}
+    wp_die(); // Stop further execution
+}
+add_action('wp_ajax_fetch_scallop_content', 'fetch_scallop_content');
+add_action('wp_ajax_nopriv_fetch_scallop_content', 'fetch_scallop_content');

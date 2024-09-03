@@ -28,7 +28,7 @@ function createBubble() {
 
   setTimeout(() => {
     createElement.remove();
-  }, 11000);
+  }, 12000);
 }
 
 setInterval(createBubble, 500);
