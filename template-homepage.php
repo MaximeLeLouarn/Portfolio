@@ -23,31 +23,31 @@ get_header();
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="skill1 swiper-slide"  data-post-id="1">
+                        <div class="skill1 swiper-slide"  data-skillN="javascript">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/JSscallop.png' ?>" alt="Javascript icon inside a great scallop">
                         </div>
-                        <div class="skill2 swiper-slide"  data-post-id="2">
+                        <div class="skill2 swiper-slide"  data-skillN="html">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/HTMLscallop.png' ?>" alt="HTML icon inside a great scallop">
                         </div>
-                        <div class="skill3 swiper-slide" data-post-id="3">
+                        <div class="skill3 swiper-slide"  data-skillN="php">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/PHPscallop.png' ?>" alt="PHP icon inside a great scallop">
                         </div>
-                        <div class="skill4 swiper-slide"  data-post-id="4">
+                        <div class="skill4 swiper-slide"  data-skillN="">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/GreenITscallop.png' ?>" alt="GreenIT icon inside a great scallop">
                         </div>
-                        <div class="skill5 swiper-slide"  data-post-id="5">
+                        <div class="skill5 swiper-slide"  data-skillN="">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Agilescallop.png' ?>" alt="Agile icon inside a great scallop">
                         </div>
-                        <div class="skill6 swiper-slide"  data-post-id="6">
+                        <div class="skill6 swiper-slide"  data-skillN="">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/CSSscallop.png' ?>" alt="CSS icon inside a great scallop">
                         </div>
-                        <div class="skill7 swiper-slide"  data-post-id="7">
+                        <div class="skill7 swiper-slide"  data-skillN="">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SASSscallop.png' ?>" alt="SASS icon inside a great scallop">
                         </div>
-                        <div class="skill8 swiper-slide"  data-post-id="8">
+                        <div class="skill8 swiper-slide"  data-skillN="">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Translationscallop.png' ?>" alt="Translation icon inside a great scallop">
                         </div>
-                        <div class="skill9 swiper-slide"  data-post-id="9">
+                        <div class="skill9 swiper-slide"  data-skillN="">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SEOscallop.png' ?>" alt="SEO icon inside a great scallop">
                         </div>
                     </div>
@@ -99,6 +99,18 @@ get_header();
             <p>En résumé : JS - PHP - HTML - CSS - SASS - Méthode Agile - SEO - Backend de Wordpress - Traduction de contenu en anglais - Green IT</p>
         </div>
     </section>
+
+    <div class="projectsAndContact" id="particles-js">
+
+        <section class="projets">
+            <h2>Projets et travaux récents</h2>
+            <button>Voir tous les projets</button>
+        </section>
+
+
+        <section class="contact"></section>
+
+    </div>
 
 </main>
 

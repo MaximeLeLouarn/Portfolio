@@ -3,7 +3,7 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
 
     // Get post ID from clicked element
-    let skillName = $(this).data("skill-name");
+    let skillName = $(this).data("skillN");
 
     // AJAX call to fetch the content
     $.ajax({
@@ -12,7 +12,7 @@ jQuery(document).ready(function ($) {
       dataType: "html",
       data: {
         action: "fetch_scallop_content",
-        post_id: skillName,
+        skillN: skillName,
       },
       success: function (res) {
         // Load content into lightbox and show it

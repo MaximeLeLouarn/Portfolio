@@ -149,7 +149,14 @@ function portfoliomax_scripts() {
 	wp_enqueue_script( 'portfoliomax-animations', get_template_directory_uri() . '/js/lightbox.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-slider', get_template_directory_uri() . '/js/slider.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'portfoliomax-ajax', get_template_directory_uri() . '/js/ajax.js', array('jquery'), _S_VERSION, true );
+	wp_enqueue_script( 'portfoliomax-particlesBg', get_template_directory_uri() . '/js/particles.js', array('jquery'), _S_VERSION, true );
+	// Slider
 	wp_enqueue_script( 'swiper-import', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js');
+	// Space bg
+	wp_enqueue_script( 'particules-import', 'https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js');
+	// Three.js for both space bg + github animation like. 
+	wp_enqueue_script( 'threejs-import', 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.168.0/three.module.min.js', array(), '0.168.0', true);
+
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -157,6 +164,15 @@ function portfoliomax_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'portfoliomax_scripts' );
+
+// Important function, that will precise it is a module that's imported for the three.js, which will avoid a syntax library error
+function add_type_attribute( $tag, $handle ) {
+    if ( 'threejs-import' !== $handle ) {
+        return $tag;
+    }
+    return str_replace( '<script ', '<script type="module" ', $tag );
+}
+add_filter( 'script_loader_tag', 'add_type_attribute', 10, 2 );
 
 /**
  * Implement the Custom Header feature.
