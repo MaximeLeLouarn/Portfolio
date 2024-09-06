@@ -1,7 +1,5 @@
 <?php
 // Access the 'skill' parameter passed through the template part
-$skill = isset($args['skill']) ? $args['skill'] : '';
-
     // Retrieving custom fields
     $imageSC = get_field('imagesc');
     $techIcon = get_field('techicon');

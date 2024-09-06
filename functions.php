@@ -204,39 +204,41 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 // Custom functions
 
 function fetch_scallop_content() {
+    if (isset($_POST['skilln'])) {
+        $skill_name = sanitize_text_field($_POST['skilln']); // sanitize input
 
-		if (isset($_POST['skill_name'])) {
-			$skill_name = sanitize_text_field($_POST['skill_name']);
+        // error_log('Received skilln: ' . $skill_name);
 
-        if ($skill) {
-            $args = [
-                'post_type' => 'scallop',
-                'posts_per_page' => 1,  // Adjust based on your requirement
-                'orderby' => 'name',
-                'order' => 'DESC',
-                'meta_query' => [
-                    [
-                        'key' => 'skillname',  // This is the ACF field name
-                        'value' => $skill_name,
-                        'compare' => '=',  // Exact match
-                    ]
-                ]
-            ];
+        $args = [
+            'post_type' => 'scallop',
+            'posts_per_page' => 1,
+            'meta_key' => 'skillname',
+            'meta_value' => $skill_name,
+            'compare' => '='
+        ];
 
-        // Start output buffering to capture the content
-        ob_start();
+        // error_log('Running query with skilln: ' . $skill_name);
+        $scallop_query = new WP_Query($args);
 
-        // Load the content from the template part, passing necessary variables
-        get_template_part('template-parts/styleScallop', null, array('skill' => $skill));
+        if ($scallop_query->have_posts()) {
+            // Start output buffering to capture the content
+            ob_start();
+            while ($scallop_query->have_posts()) {
+                $scallop_query->the_post();
+                get_template_part('template-parts/styledScallop', null, array('skill' => $skill_name));
+            }
+            $content = ob_get_clean();
+            // error_log('Generated content: ' . $content);
+            echo $content;
+        } else {
+            // error_log('No posts found for skillname: ' . $skill_name);
+            echo '<p>Pas de contenu trouvé pour la compétence suivante</p>';
+        }
 
-        // Get buffered content
-        $content = ob_get_clean();
-
-        // Output the content
-        echo $content;
+        wp_reset_postdata(); // Reset after query
     }
-}
     wp_die(); // Stop further execution
 }
+
 add_action('wp_ajax_fetch_scallop_content', 'fetch_scallop_content');
 add_action('wp_ajax_nopriv_fetch_scallop_content', 'fetch_scallop_content');
