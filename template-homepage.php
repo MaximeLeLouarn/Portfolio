@@ -89,19 +89,57 @@ get_header();
         </div>
     </section>
 
-    <div class="projectsAndContact" id="particles-js">
+    <div class="projectsAndContact">
+        <div id="particles-js"></div>
 
-        <section class="projets">
-            <h2>Projets et travaux récents</h2>
-            <div class="projectContainer">
-                <h3>Nathalie Mota</h3>
-                <img src="<?php get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Nathalie Mota's project on his laptop">
-            </div>
-            <button>Voir tous les projets</button>
-        </section>
+            <div class="pcContainer">
+                <section class="projets">
+                    <h2>Projets et travaux récents</h2>
+                    <div class="projectGrid">
+
+                        <!-- Grid with 6 elements -->
+                        <div class="projectContainer">
+                            <h3>Koukaki</h3>
+                            <div class="parallaxeWrapper">
+                                <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Koukaki's project on his laptop">
+                            </div>
+                        </div>
+                        <div class="textProject">
+                            <p>Site de formation, demandant de programmer beaucoup d'animations visuelles.</p>
+                        </div>
+                        
+                        <div class="textProject">
+                            <p>Site de formation, demandant une connaissance profonde des mécanismes du back end de WordPress pour
+                                en exploiter les données.
+                            </p>
+                        </div>
+                        <div class="projectContainer">
+                            <h3>Nathalie Mota</h3>
+                            <div class="parallaxeWrapper">
+                                <img class="rotateB" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Nathalie Mota's project on his laptop">
+                            </div>
+                        </div>
+
+                        <div class="projectContainer">
+                            <h3>Fingerstyle</h3>
+                            <div class="parallaxeWrapper">
+                                <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Fingerstyle's project on his laptop">
+                            </div>
+                        </div>
+                        <div class="textProject-padBTM">
+                            <p>Site réalisé dans le but de créer un espace communautaire autour du Fingerstyle, une pratique
+                                musicale qui consiste à jouer sur des instruments à cordes uniquement avec les doigts, et réaliser des polyrythmies et autres
+                                techniques avancées.
+                            </p>
+                        </div>
+
+                    </div>
+                    <button class="seeProjects">Voir tous les projets</button>
+                </section>
 
 
-        <section class="contact"></section>
+                <section class="contact"></section>
+           </div>
 
     </div>
 
