@@ -32,23 +32,26 @@ get_header();
                         <div class="skill3 swiper-slide"  data-skilln="php">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/PHPscallop.png' ?>" alt="PHP icon inside a great scallop">
                         </div>
-                        <div class="skill4 swiper-slide"  data-skilln="">
+                        <div class="skill4 swiper-slide"  data-skilln="greenit">
                         <img class="skillop" src="<?= get_template_directory_uri() . '/assets/GreenITscallop.png' ?>" alt="GreenIT icon inside a great scallop">
                         </div>
-                        <div class="skill5 swiper-slide"  data-skilln="">
+                        <div class="skill5 swiper-slide"  data-skilln="agile">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Agilescallop.png' ?>" alt="Agile icon inside a great scallop">
                         </div>
-                        <div class="skill6 swiper-slide"  data-skilln="">
+                        <div class="skill6 swiper-slide"  data-skilln="css">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/CSSscallop.png' ?>" alt="CSS icon inside a great scallop">
                         </div>
-                        <div class="skill7 swiper-slide"  data-skilln="">
+                        <div class="skill7 swiper-slide"  data-skilln="sass">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SASSscallop.png' ?>" alt="SASS icon inside a great scallop">
                         </div>
-                        <div class="skill8 swiper-slide"  data-skilln="">
+                        <div class="skill8 swiper-slide"  data-skilln="translation">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/Translationscallop.png' ?>" alt="Translation icon inside a great scallop">
                         </div>
-                        <div class="skill9 swiper-slide"  data-skilln="">
+                        <div class="skill9 swiper-slide"  data-skilln="seo">
                             <img class="skillop" src="<?= get_template_directory_uri() . '/assets/SEOscallop.png' ?>" alt="SEO icon inside a great scallop">
+                        </div>
+                        <div class="skill10 swiper-slide"  data-skilln="wordpress">
+                            <img class="skillop" src="<?= get_template_directory_uri() . '/assets/WordpressScallop.png' ?>" alt="WordPress icon inside a great scallop">
                         </div>
                     </div>
                 </div>
@@ -100,9 +103,11 @@ get_header();
                         <!-- Grid with 6 elements -->
                         <div class="projectContainer">
                             <h3>Koukaki</h3>
-                            <div class="parallaxeWrapper">
-                                <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Koukaki's project on his laptop">
-                            </div>
+                            <a href="#">
+                                <div class="parallaxeWrapper">
+                                    <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautKoukaki.png' ?>" alt="Astronaut floating and holding Koukaki's project on his laptop">
+                                </div>
+                            </a>
                         </div>
                         <div class="textProject">
                             <p>Site de formation, demandant de programmer beaucoup d'animations visuelles.</p>
@@ -115,16 +120,20 @@ get_header();
                         </div>
                         <div class="projectContainer">
                             <h3>Nathalie Mota</h3>
-                            <div class="parallaxeWrapper">
-                                <img class="rotateB" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Nathalie Mota's project on his laptop">
-                            </div>
+                            <a href="#">
+                                <div class="parallaxeWrapper">
+                                    <img class="rotateB" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Nathalie Mota's project on his laptop">
+                                </div>
+                            </a>
                         </div>
 
                         <div class="projectContainer">
                             <h3>Fingerstyle</h3>
-                            <div class="parallaxeWrapper">
-                                <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Fingerstyle's project on his laptop">
-                            </div>
+                            <a href="#">
+                                <div class="parallaxeWrapper">
+                                    <img class="rotateF" src="<?= get_template_directory_uri() . '/assets/AstronautMota.png' ?>" alt="Astronaut floating and holding Fingerstyle's project on his laptop">
+                                </div>
+                            </a>
                         </div>
                         <div class="textProject-padBTM">
                             <p>Site réalisé dans le but de créer un espace communautaire autour du Fingerstyle, une pratique

@@ -233,7 +233,7 @@ main#primary {
     .infosSkillsContainer {
         background-color: #191714;
         background-image: linear-gradient(0deg, $black 0%, #191714 84%);
-        padding-top: 25px;
+        padding-top: 48px;
 
         .infosSkills {
             position: relative;
@@ -244,6 +244,10 @@ main#primary {
             flex-direction: column;
             align-items: center;
             gap: 25px;
+
+            p {
+                padding-top: 25px;
+            }
 
             .description {
                 position: relative;
@@ -275,6 +279,7 @@ main#primary {
             }
             .skills {
                 width: 100vw;
+                padding-top: 25px;
                 .swiper {
                     width: 100vw;
                     height: 450px;
@@ -320,7 +325,7 @@ main#primary {
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.86);
 
     .lightflex {
         display: flex;
@@ -426,12 +431,15 @@ main#primary {
             align-items: center;
             gap: 40px;
 
+            a {
+                cursor: pointer;
+            }
             .parallaxeWrapper {
                 animation: parallaxeAstronaut 35s ease-in-out alternate infinite;
 
                 .rotateF {
                     aspect-ratio: 1/1;
-                    height: 370px;
+                    height: 400px;
                     animation: rotateAstronaut 25s alternate infinite;
                 }
                 .rotateB {
@@ -444,7 +452,7 @@ main#primary {
         .seeProjects {
             padding: 10px;
             text-align: center;
-            transform: translateY(-100px);
+            transform: translateY(-150px);
             max-width: 208px;
             border: transparent;
             border-radius: 8px;
@@ -464,6 +472,7 @@ main#primary {
         "project5 project6";
     gap: 40px;
     position: relative;
+    padding-top: 48px;
 
     .textProject {
         text-align: center;

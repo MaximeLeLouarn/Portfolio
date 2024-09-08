@@ -205,7 +205,7 @@ main#primary .bubblesbgc span {
 main#primary .infosSkillsContainer {
   background-color: #191714;
   background-image: linear-gradient(0deg, black 0%, #191714 84%);
-  padding-top: 25px;
+  padding-top: 48px;
 }
 main#primary .infosSkillsContainer .infosSkills {
   position: relative;
@@ -216,6 +216,9 @@ main#primary .infosSkillsContainer .infosSkills {
   flex-direction: column;
   align-items: center;
   gap: 25px;
+}
+main#primary .infosSkillsContainer .infosSkills p {
+  padding-top: 25px;
 }
 main#primary .infosSkillsContainer .infosSkills .description {
   position: relative;
@@ -245,6 +248,7 @@ main#primary .infosSkillsContainer .infosSkills .description p {
 }
 main#primary .infosSkillsContainer .infosSkills .skills {
   width: 100vw;
+  padding-top: 25px;
 }
 main#primary .infosSkillsContainer .infosSkills .skills .swiper {
   width: 100vw;
@@ -285,7 +289,7 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
   width: 100vw;
   height: 100vh;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.86);
 }
 .lightbox .lightflex {
   display: flex;
@@ -392,12 +396,15 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
   align-items: center;
   gap: 40px;
 }
+.pcContainer .projets .projectContainer a {
+  cursor: pointer;
+}
 .pcContainer .projets .projectContainer .parallaxeWrapper {
   animation: parallaxeAstronaut 35s ease-in-out alternate infinite;
 }
 .pcContainer .projets .projectContainer .parallaxeWrapper .rotateF {
   aspect-ratio: 1/1;
-  height: 370px;
+  height: 400px;
   animation: rotateAstronaut 25s alternate infinite;
 }
 .pcContainer .projets .projectContainer .parallaxeWrapper .rotateB {
@@ -408,7 +415,7 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
 .pcContainer .projets .seeProjects {
   padding: 10px;
   text-align: center;
-  transform: translateY(-100px);
+  transform: translateY(-150px);
   max-width: 208px;
   border: transparent;
   border-radius: 8px;
@@ -423,6 +430,7 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
   grid-template-areas: "project1 project2" "project3 project4" "project5 project6";
   gap: 40px;
   position: relative;
+  padding-top: 48px;
 }
 .projectGrid .textProject {
   text-align: center;
