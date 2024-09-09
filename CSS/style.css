@@ -415,7 +415,7 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
 .pcContainer .projets .seeProjects {
   padding: 10px;
   text-align: center;
-  transform: translateY(-150px);
+  transform: translateY(-100px);
   max-width: 208px;
   border: transparent;
   border-radius: 8px;
@@ -456,6 +456,50 @@ main#primary .infosSkillsContainer .infosSkills .skills .swiper-slide {
 .projectGrid .textProject-padBTM:nth-child(6) {
   grid-area: project6;
   transform: translateY(-20%);
+}
+
+.contact {
+  padding-top: 36px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.contact .globeContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .globeContainer #globe-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  width: 100%;
+  height: 80vh;
+}
+.contact .globeContainer #globe-container .scene-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px !important;
+  width: auto !important;
+  height: auto !important;
+}
+.contact .globeContainer #globe-container .scene-container .scene-tooltip {
+  display: none;
+}
+.contact .globeContainer #globe-container .scene-container canvas {
+  max-width: 1000px !important;
+  width: auto !important;
+  height: auto !important;
+}
+.scene-tooltip {
+  display: none;
 }
 
 .elevateBubbles {

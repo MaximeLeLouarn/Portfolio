@@ -147,7 +147,12 @@ get_header();
                 </section>
 
 
-                <section class="contact"></section>
+                <section class="contact">
+                    <div class="globeContainer">
+                        <div id="globe-container"></div>
+                    </div>
+                    <div class="connect"></div>
+                </section>
            </div>
 
     </div>
