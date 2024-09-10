@@ -1,5 +1,5 @@
 // Colors palette
-$white: white;
+$white: rgb(184, 14, 14);
 $black: black;
 $blackOpacity: rgba(0, 0, 0, 0.6);
 $darkBlue: #041e42;
@@ -275,6 +275,18 @@ main#primary {
 
                 p {
                     text-align: center;
+                }
+            }
+            @media screen and (max-width: 1230px) {
+                .infosSkillsContainer {
+                    .description {
+                        &::before {
+                            display: none;
+                        }
+                        &::after {
+                            display: none;
+                        }
+                    }
                 }
             }
             .skills {
